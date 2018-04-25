@@ -17,4 +17,9 @@ router.get('/', (req, res) => {
     });
 });
 
+// show route
+router.get('/:id', (req, res) => {
+  res.send('we showed it');
+});
+
 module.exports = router;
