@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   Book.findAll()
     .then((books) => {
       res.render('books/index', {
-        books: books
+        books
       });
     })
     .catch((err) => {
@@ -19,7 +19,17 @@ router.get('/', (req, res) => {
 
 // show route
 router.get('/:id', (req, res) => {
-  res.send('we showed it');
+  // res.send('we showed it');
+
+  Book.findById(req.params.id)
+    .then((book) => {
+      res.render('books/show', {
+         book
+      });
+    })
+    .catch((err) => {
+      res.status(400).render('error');
+    });
 });
 
 module.exports = router;
