@@ -7,6 +7,10 @@
   <a class="btn btn-outline-info margin-top" href="/books/<%= book.id %>/edit">edit book</a>
 </div>
 
+<form action="/books/<%= book.id %>?_method=DELETE" method="POST">
+  <input class="btn btn-outline-danger sm-margin-top" type="submit" value="delete this book" />
+</form>
+
 <div>
   <a class="btn btn-outline-info margin-top" href="/books">back</a>
 </div>

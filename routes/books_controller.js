@@ -88,4 +88,19 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete route
+router.delete('/:id', (req, res) => {
+  Book.findById(req.params.id)
+    .then((book) => {
+      return book.destroy(); // destroy method is an asynchronous call that returns a promise
+    })
+    .then(() => {
+      // redirect back to index route
+      res.redirect('/books');
+    })
+    .catch((err) => {
+      res.status(400).render('error');
+    });
+});
+
 module.exports = router;
