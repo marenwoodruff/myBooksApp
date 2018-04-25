@@ -1,1 +1,25 @@
 <h1>add a new book!</h1>
+
+<form action="/books" method="POST">
+   <div class="form-group">
+      <label for="title">book title <span class="red">(required)</span></label>
+      <input class="form-control" type="text" id="title" name="title" required>
+   </div>
+
+   <div class="form-group">
+      <label for="genre">genre</label>
+      <input class="form-control" type="text" id="genre" name="genre">
+   </div>
+
+   <div class="form-group">
+      <label for="description">description</label>
+      <input class="form-control" type="text" id="description" name="description">
+   </div>
+
+   <div class="form-group">
+      <input class="btn btn-outline-info" type="submit" value="submit">
+   </div>
+</form>
+
+
+<a class="btn btn-outline-info margin-top" href="/books">back</a>
