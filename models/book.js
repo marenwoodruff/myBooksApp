@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   book.associate = function(models) {
     // associations can be defined here
+    book.belongsTo(models.user, {foreignKey : 'userId'});
   };
   return book;
 };

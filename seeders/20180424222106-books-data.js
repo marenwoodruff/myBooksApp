@@ -13,7 +13,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('book', bookData, {});
+    return queryInterface.bulkInsert('books', bookData, {});
   },
 
   down: (queryInterface, Sequelize) => {
@@ -24,6 +24,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
-    return queryInterface.bulkDelete('book', null, {});
+    return queryInterface.bulkDelete('books', null, {});
   }
 };
