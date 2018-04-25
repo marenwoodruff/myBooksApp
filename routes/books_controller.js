@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   Book.findAll()
     .then((books) => {
       res.render('books/index', {
-        books
+        books: books
       });
     })
     .catch((err) => {

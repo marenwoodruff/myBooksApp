@@ -1,10 +1,10 @@
 <h1>my books</h1>
 
-<% if (books && books) { %>
+<% if (books && books.length) { %>
   <ul>
     <% books.forEach((book) => { %>
       <li class="margin-bottom">
-        <h2><a href="/books/<%= book.id %>"><%= book.name %></a></h2>
+        <h2><a href="/books/<%= book.id %>"><%= book.title %></a></h2>
       </li>
     <% }); %>
 
