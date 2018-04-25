@@ -17,6 +17,13 @@ router.get('/', (req, res) => {
     });
 });
 
+// new route
+router.get('/new', (req, res) => {
+  // res.send('we knew it');
+  
+  res.render('books/new');
+});
+
 // show route
 router.get('/:id', (req, res) => {
   // res.send('we showed it');
