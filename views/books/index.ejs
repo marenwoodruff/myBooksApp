@@ -1,1 +1,17 @@
 <h1>my books</h1>
+
+<% if (books && books) { %>
+  <ul>
+    <% books.forEach((book) => { %>
+      <li class="margin-bottom">
+        <h2><a href="/books/<%= book.id %>"><%= book.name %></a></h2>
+      </li>
+    <% }); %>
+
+    <a class="btn btn-outline-info margin-top" href="/books/new">add a new book</a>
+  </ul>
+<% } else { %>
+  <h3>You don't have any books!</h3>
+
+  <a class="btn btn-outline-info margin-top" href="/books/new">add a new book</a>
+<% } %>
